@@ -328,6 +328,12 @@ namespace Microsoft.Bot.Builder.Dialogs
             return result;
         }
 
+        public bool IsLoggedIn(ITurnContext context)
+        {
+            return GetUserTokenAsync(context).Result != null;
+        }
+
+
         private bool IsTokenResponseEvent(ITurnContext context)
         {
             var activity = context.Activity;
