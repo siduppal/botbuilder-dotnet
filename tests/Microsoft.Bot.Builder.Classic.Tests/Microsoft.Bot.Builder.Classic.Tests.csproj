@@ -19,21 +19,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Autofac" Version="4.7.1" />
+		<PackageReference Include="Autofac" Version="4.8.1" />
 		<PackageReference Include="Chronic.Signed" Version="0.3.2" />
-		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.4" targetFramework="net46" />
-		<PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.4" targetFramework="net46" />
-		<PackageReference Include="Microsoft.IdentityModel.Logging" Version="5.2.1" />
-		<PackageReference Include="Microsoft.IdentityModel.Protocols" Version="5.2.1" />
-		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="5.2.1" />
-		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.2.1" />
-		<PackageReference Include="Microsoft.Net.Compilers" Version="1.2.1" targetFramework="net46" developmentDependency="true" />
-		<PackageReference Include="Microsoft.Rest.ClientRuntime" Version="2.3.10" />
-		<PackageReference Include="Microsoft.WindowsAzure.ConfigurationManager" Version="3.2.1" targetFramework="net46" />
-		<PackageReference Include="Moq" Version="4.8.2" targetFramework="net46" />
-		<PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-		<PackageReference Include="System.CodeDom" Version="4.4.0" />
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.2.1" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.6" targetFramework="net46" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.6" targetFramework="net46" />
+		<PackageReference Include="Microsoft.IdentityModel.Logging" Version="5.2.4" />
+		<PackageReference Include="Microsoft.IdentityModel.Protocols" Version="5.2.4" />
+		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="5.2.4" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.2.4" />
+		<PackageReference Include="Microsoft.Net.Compilers" Version="2.9.0" targetFramework="net46" developmentDependency="true" />
+		<PackageReference Include="Microsoft.Rest.ClientRuntime" Version="2.3.13" />
+		<PackageReference Include="Microsoft.WindowsAzure.ConfigurationManager" Version="3.2.3" targetFramework="net46" />
+		<PackageReference Include="Moq" Version="4.9.0" targetFramework="net46" />
+		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+		<PackageReference Include="System.CodeDom" Version="4.5.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.2.4" />
 	</ItemGroup>
 
 	<ItemGroup>

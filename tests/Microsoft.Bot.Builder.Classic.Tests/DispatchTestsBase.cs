@@ -191,8 +191,8 @@ namespace Microsoft.Bot.Builder.Classic.Tests
             this.activity.Type = null;
             this.activity.Text = null;
             this.methods.Reset();
-            this.luisOne.ResetCalls();
-            this.luisTwo.ResetCalls();
+            this.luisOne.Invocations.Clear();
+            this.luisTwo.Invocations.Clear();
             this.luisOneByText.Clear();
             this.luisTwoByText.Clear();
         }

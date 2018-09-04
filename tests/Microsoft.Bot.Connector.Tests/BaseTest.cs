@@ -34,7 +34,7 @@ namespace Connector.Tests
 
         private string ClassName => GetType().FullName;
 
-
+#pragma push warning("CS0162")
         public BaseTest()
         {
             if (mode == HttpRecorderMode.Record)
@@ -87,6 +87,7 @@ namespace Connector.Tests
                 context.Stop();
             }
         }
+#pragma pop
     }
 
     public class BotAccessTokenStub : ServiceClientCredentials
