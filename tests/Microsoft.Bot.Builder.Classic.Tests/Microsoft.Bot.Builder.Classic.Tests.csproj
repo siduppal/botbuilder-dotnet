@@ -31,7 +31,7 @@
 		<PackageReference Include="Microsoft.Rest.ClientRuntime" Version="2.3.13" />
 		<PackageReference Include="Microsoft.WindowsAzure.ConfigurationManager" Version="3.2.3" targetFramework="net46" />
 		<PackageReference Include="Moq" Version="4.9.0" targetFramework="net46" />
-		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+		<PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
 		<PackageReference Include="System.CodeDom" Version="4.5.0" />
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.2.4" />
 	</ItemGroup>
