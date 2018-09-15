@@ -131,6 +131,31 @@ namespace Microsoft.Bot.Builder.AI.Luis.Tests
         }
 
         [TestMethod]
+        public async Task MultipleIntents_PrebuiltDateRangeEntity()
+        {
+            const string utterance = "monday thru friday";
+
+            var mockHttp = new MockHttpMessageHandler();
+            mockHttp.When(GetRequestUrl()).WithPartialContent(utterance)
+                .Respond("application/json", GetResponse("MultipleIntents_PrebuiltDateRangeEntity.json"));
+
+            var luisRecognizer = GetLuisRecognizer(mockHttp, true, new LuisPredictionOptions { IncludeAllIntents = true });
+            var context = GetContext(utterance);
+            var result = await luisRecognizer.RecognizeAsync(context, CancellationToken.None);
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(utterance, result.Text);
+            Assert.IsNotNull(result.Intents);
+            Assert.IsTrue(result.Intents.Count > 1);
+            Assert.IsNotNull(result.Intents["OpenDays"]);
+            Assert.AreEqual("OpenDays", result.GetTopScoringIntent().intent);
+            Assert.IsNotNull(result.Entities["datetime"].First["start"]);
+            Assert.IsNotNull(result.Entities["datetime"].First["end"]);
+            Assert.AreEqual("2018-09-10", (string)result.Entities["datetime"].First["start"]);
+            Assert.AreEqual("2018-09-14", (string)result.Entities["datetime"].First["end"]);
+        }
+
+        [TestMethod]
         public async Task MultipleIntents_ListEntityWithSingleValue()
         {
             const string utterance = "I want to travel on united";

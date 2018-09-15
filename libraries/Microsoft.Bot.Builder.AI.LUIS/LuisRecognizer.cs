@@ -151,7 +151,16 @@ namespace Microsoft.Bot.Builder.AI.Luis
                 var type = resolution.values[0].type;
                 var timexes = resolutionValues.Select(val => val.timex);
                 var distinctTimexes = timexes.Distinct();
-                return new JObject(new JProperty("type", type), new JProperty("timex", JArray.FromObject(distinctTimexes)));
+
+                var jObject = new JObject(new JProperty("type", type), new JProperty("timex", JArray.FromObject(distinctTimexes)));
+
+                if (entity.Type == "builtin.datetimeV2.daterange")
+                {
+                    jObject.Add("start", resolution.values[0].start);
+                    jObject.Add("end", resolution.values[0].end);
+                }
+
+                return jObject;
             }
             else
             {
